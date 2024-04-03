@@ -22,7 +22,8 @@ jobs:
       - name: Build and push Nginx image
         uses: docker/build-push-action@v3
         with:
-          context: nginx
-          file: nginx/Dockerfile
+          context: .
+          file: Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nginx_graduation:v1 # Customize image names
+        
